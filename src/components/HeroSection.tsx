@@ -58,8 +58,7 @@ const HeroSection = () => {
               variants={item}
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.15] md:leading-tight lg:leading-tight mb-4 sm:mb-6"
             >
-              BBA in{" "}
-              <span className="text-secondary">Artificial Intelligence</span>
+              <span className="text-secondary">AI-Powered</span> Degree Program
             </motion.h1>
 
             <motion.h2

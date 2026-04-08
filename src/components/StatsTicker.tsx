@@ -60,9 +60,9 @@ const StatsTicker = () => {
   }, [inView]);
 
   return (
-    <section ref={sectionRef} className="bg-primary py-10 md:py-14">
+    <section ref={sectionRef} className="bg-primary py-8 sm:py-10 md:py-14">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+        <div className="grid grid-cols-1 gap-4 text-center sm:grid-cols-2 sm:gap-5 lg:grid-cols-5 lg:gap-8">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
@@ -70,11 +70,12 @@ const StatsTicker = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
+              className="mx-auto flex w-full max-w-xs flex-col justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-5 backdrop-blur-sm sm:last:col-span-2 sm:px-5 lg:max-w-none lg:rounded-none lg:border-0 lg:bg-transparent lg:px-0 lg:py-0 lg:last:col-span-1"
             >
-              <div className="text-3xl md:text-4xl font-extrabold text-white">
+              <div className="text-2xl font-extrabold leading-none text-white sm:text-3xl md:text-4xl">
                 <CountUp target={s.value} suffix={s.suffix} trigger={trigger} />
               </div>
-              <div className="text-secondary text-sm font-medium mt-1">
+              <div className="mt-2 text-sm font-medium leading-snug text-secondary sm:text-[15px]">
                 {s.label}
               </div>
             </motion.div>

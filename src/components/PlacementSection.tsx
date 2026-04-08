@@ -1,39 +1,65 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
-const companies = ["TCS", "Infosys", "Wipro", "Deloitte", "IBM", "Amazon", "Microsoft", "Cognizant", "Accenture", "KPMG", "Google", "HCL"];
+const companies = [
+  { name: "TCS", logo: "/logos/tcs.webp" },
+  { name: "Infosys", logo: "/logos/infosys.webp" },
+  { name: "Wipro", logo: "/logos/wipro.webp" },
+  { name: "Deloitte", logo: "/logos/deloitte.webp" },
+  { name: "IBM", logo: "/logos/ibm.webp" },
+  { name: "Amazon", logo: "/logos/amazon.webp" },
+  { name: "Microsoft", logo: "/logos/microsoft.webp" },
+  { name: "Cognizant", logo: "/logos/cognizant.webp" },
+  { name: "Accenture", logo: "/logos/accenture.webp" },
+  { name: "KPMG", logo: "/logos/kpmg.webp" },
+  { name: "Google", logo: "/logos/google.webp" },
+  { name: "HCL", logo: "/logos/hcl.webp" },
+];
 
 const roles = [
   { title: "AI Business Analyst", salary: "₹6–12 LPA" },
-  { title: "Data Strategist", salary: "₹8–15 LPA" },
-  { title: "Digital Marketing Head", salary: "₹5–10 LPA" },
-  { title: "Product Manager (AI)", salary: "₹10–20 LPA" },
-  { title: "AI Consultant", salary: "₹12–25 LPA" },
-  { title: "Entrepreneur / Founder", salary: "Unlimited" },
+  { title: "Data Scientist / Analyst", salary: "₹8–18 LPA" },
+  { title: "Software Developer (AI)", salary: "₹6–15 LPA" },
+  { title: "Product Manager (AI)", salary: "₹10–25 LPA" },
+  { title: "AI Consultant / Specialist", salary: "₹12–30 LPA" },
+  { title: "Digital Transformation Manager", salary: "₹8–20 LPA" },
+  { title: "Machine Learning Engineer", salary: "₹10–22 LPA" },
+  { title: "Entrepreneur / Startup Founder", salary: "Unlimited" },
+  { title: "Business Intelligence (BI) Analyst", salary: "₹6–14 LPA" },
 ];
 
 const PlacementSection = () => (
-  <section id="placements" className="py-16 md:py-20 bg-white">
+  <section id="placements" className="py-12 sm:py-16 md:py-20 bg-white">
     <div className="container mx-auto px-4">
-      <SectionHeading tag="Careers" title="Your Career After BBA in AI" />
+      <SectionHeading
+        tag="Careers"
+        title="Your Career After AI-Powered Degree Programs"
+      />
 
       {/* Company logos strip */}
-      <div className="mb-12 overflow-hidden">
+      <div className="mb-8 sm:mb-12 overflow-hidden">
         <motion.div
-          className="flex gap-4 w-max"
+          className="flex gap-3 sm:gap-6 w-max items-center"
           animate={{ x: [0, -600] }}
           transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
         >
           {[...companies, ...companies].map((c, i) => (
-            <span key={`${c}-${i}`} className="bg-light border border-gray-200 px-5 py-2.5 rounded-lg text-sm font-semibold text-text-dark whitespace-nowrap">
-              {c}
-            </span>
+            <div
+              key={`${c.name}-${i}`}
+              className="bg-light border border-gray-200 px-3 sm:px-5 py-2 sm:py-3 rounded-lg flex items-center justify-center min-w-[90px] sm:min-w-[120px]"
+            >
+              <img
+                src={c.logo}
+                alt={c.name}
+                className="h-5 sm:h-6 object-contain grayscale hover:grayscale-0 transition"
+              />
+            </div>
           ))}
         </motion.div>
       </div>
 
       {/* Role cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
         {roles.map((r, i) => (
           <motion.div
             key={r.title}
@@ -41,11 +67,15 @@ const PlacementSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
-            className="bg-dark rounded-xl p-6 text-white relative overflow-hidden group"
+            className="bg-dark rounded-xl p-4 sm:p-6 text-white relative overflow-hidden group"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-primary" />
-            <h3 className="font-bold text-lg mb-2">{r.title}</h3>
-            <p className="text-secondary font-bold text-xl">{r.salary}</p>
+            <h3 className="font-bold text-base sm:text-lg mb-1 sm:mb-2">
+              {r.title}
+            </h3>
+            <p className="text-secondary font-bold text-lg sm:text-xl">
+              {r.salary}
+            </p>
           </motion.div>
         ))}
       </div>

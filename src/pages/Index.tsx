@@ -22,19 +22,20 @@ const Index = () => (
     <HeroSection />
     <StatsTicker />
     <WhyBBAinAI />
-    {/* <ProgramHighlights />
+    <ProgramHighlights />
     <UniversityOverview />
-    <WhoShouldApply />
-    <CurriculumRoadmap />
     <PlacementSection />
     <Testimonials />
-    <FeeStructure />
     <AdmissionProcess />
     <FAQSection />
     <VideoSection />
     <ContactSection />
-    <Footer />
-    <StickyMobileCTA /> */}
+    <StickyMobileCTA />
+    {/* Removed sections below */}
+    {/* <WhoShouldApply /> */}
+    {/* <CurriculumRoadmap /> */}
+    {/* <FeeStructure /> */}
+    {/* <Footer /> */}
   </div>
 );
 
