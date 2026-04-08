@@ -9,13 +9,21 @@ const stats = [
   { value: 25, suffix: "+", label: "Specializations" },
 ];
 
-const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true });
+const CountUp = ({
+  target,
+  suffix,
+  trigger,
+}: {
+  target: number;
+  suffix: string;
+  trigger: number;
+}) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!inView) return;
+    if (trigger === 0) return;
+
+    setCount(0);
     const duration = 1500;
     const steps = 40;
     const increment = target / steps;
@@ -30,32 +38,51 @@ const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
       }
     }, duration / steps);
     return () => clearInterval(timer);
-  }, [inView, target]);
+  }, [trigger, target]);
 
-  return <span ref={ref}>{count.toLocaleString()}{suffix}</span>;
+  return (
+    <span>
+      {count.toLocaleString()}
+      {suffix}
+    </span>
+  );
 };
 
-const StatsTicker = () => (
-  <section className="bg-primary py-10 md:py-14">
-    <div className="container mx-auto px-4">
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
-        {stats.map((s, i) => (
-          <motion.div
-            key={s.label}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-          >
-            <div className="text-3xl md:text-4xl font-extrabold text-white">
-              <CountUp target={s.value} suffix={s.suffix} />
-            </div>
-            <div className="text-secondary text-sm font-medium mt-1">{s.label}</div>
-          </motion.div>
-        ))}
+const StatsTicker = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const inView = useInView(sectionRef, { once: false, amount: 0.35 });
+  const [trigger, setTrigger] = useState(0);
+
+  useEffect(() => {
+    if (inView) {
+      setTrigger((prev) => prev + 1);
+    }
+  }, [inView]);
+
+  return (
+    <section ref={sectionRef} className="bg-primary py-10 md:py-14">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+          {stats.map((s, i) => (
+            <motion.div
+              key={s.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+            >
+              <div className="text-3xl md:text-4xl font-extrabold text-white">
+                <CountUp target={s.value} suffix={s.suffix} trigger={trigger} />
+              </div>
+              <div className="text-secondary text-sm font-medium mt-1">
+                {s.label}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default StatsTicker;
