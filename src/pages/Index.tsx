@@ -1,16 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import StatsTicker from "@/components/StatsTicker";
+import WhyBBAinAI from "@/components/WhyBBAinAI";
+import ProgramHighlights from "@/components/ProgramHighlights";
+import UniversityOverview from "@/components/UniversityOverview";
+import WhoShouldApply from "@/components/WhoShouldApply";
+import CurriculumRoadmap from "@/components/CurriculumRoadmap";
+import PlacementSection from "@/components/PlacementSection";
+import Testimonials from "@/components/Testimonials";
+import FeeStructure from "@/components/FeeStructure";
+import AdmissionProcess from "@/components/AdmissionProcess";
+import FAQSection from "@/components/FAQSection";
+import VideoSection from "@/components/VideoSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
-  return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
-  );
-};
-
-const Index = PlaceholderIndex;
+const Index = () => (
+  <div className="min-h-screen bg-background">
+    <Navbar />
+    <HeroSection />
+    <StatsTicker />
+    <WhyBBAinAI />
+    <ProgramHighlights />
+    <UniversityOverview />
+    <WhoShouldApply />
+    <CurriculumRoadmap />
+    <PlacementSection />
+    <Testimonials />
+    <FeeStructure />
+    <AdmissionProcess />
+    <FAQSection />
+    <VideoSection />
+    <ContactSection />
+    <Footer />
+    <StickyMobileCTA />
+  </div>
+);
 
 export default Index;
