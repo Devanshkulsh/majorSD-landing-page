@@ -10,7 +10,7 @@ const bullets = [
   "50+ MOUs with industry leaders",
 ];
 
-const badges = ["UGC Approved", "NAAC", "Govt. of Uttar Pradesh", "AICTE"];
+const badges = ["UGC Approved", "Govt. of Uttar Pradesh", "AICTE"];
 
 const UniversityOverview = () => (
   <section id="university-overview" className="relative py-12 sm:py-16 md:py-20 bg-light overflow-hidden">
@@ -38,7 +38,7 @@ const UniversityOverview = () => (
           <div className="absolute -inset-1 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition" />
 
           <img
-            src="/campus.jpg"
+            src="/campus.webp"
             alt="MSDS University Campus"
             className="relative rounded-2xl w-full h-[220px] sm:h-[280px] md:h-[400px] object-cover shadow-2xl border border-white/20"
           />
