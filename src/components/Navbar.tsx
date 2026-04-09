@@ -27,7 +27,7 @@ const Navbar = () => {
     { label: "Testimonials", href: "#testimonials" },
     { label: "Admission", href: "#admission-process" },
     { label: "FAQs", href: "#faqs" },
-    { label: "Videos", href: "#videos" },
+    // { label: "Videos", href: "#videos" },
     { label: "Contact", href: "#contact" },
   ];
 

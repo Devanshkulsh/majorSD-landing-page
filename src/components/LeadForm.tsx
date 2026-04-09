@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { type RefObject, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 interface LeadFormProps {
@@ -6,11 +6,107 @@ interface LeadFormProps {
 }
 
 const LeadForm = ({ compact = false }: LeadFormProps) => {
+  const courseOptions = [
+    "BBA in AI & Digital Business",
+    "BCA in AI & Data Science",
+    "MBA in AI & Digital Transformation",
+    "MCA in Data Science",
+  ];
+  const streamOptions = ["Science", "Commerce", "Arts", "Other"];
+  const modeOptions = ["Full-Time", "Distance"];
   const [form, setForm] = useState({
     name: "", phone: "", email: "", course: "", city: "", stream: "", mode: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<"course" | "stream" | "mode" | null>(null);
+  const courseDropdownRef = useRef<HTMLDivElement | null>(null);
+  const streamDropdownRef = useRef<HTMLDivElement | null>(null);
+  const modeDropdownRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      const isInsideDropdown =
+        courseDropdownRef.current?.contains(target) ||
+        streamDropdownRef.current?.contains(target) ||
+        modeDropdownRef.current?.contains(target);
+
+      if (!isInsideDropdown) {
+        setOpenDropdown(null);
+      }
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpenDropdown(null);
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
+  const renderCustomDropdown = ({
+    dropdownKey,
+    value,
+    placeholder,
+    options,
+    onSelect,
+    dropdownRef,
+  }: {
+    dropdownKey: "course" | "stream" | "mode";
+    value: string;
+    placeholder: string;
+    options: string[];
+    onSelect: (selectedValue: string) => void;
+    dropdownRef: RefObject<HTMLDivElement | null>;
+  }) => {
+    const isOpen = openDropdown === dropdownKey;
+
+    return (
+      <div ref={dropdownRef} className="relative">
+        <button
+          type="button"
+          onClick={() => setOpenDropdown((prev) => (prev === dropdownKey ? null : dropdownKey))}
+          className={`flex w-full items-center justify-between rounded-xl border bg-gradient-to-b from-white to-primary/5 px-4 py-3 text-left text-sm font-medium shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary hover:border-primary/40 ${!value ? "border-gray-200 text-gray-400" : "border-primary/30 text-text-dark"} ${isOpen ? "ring-2 ring-primary/20 border-primary" : ""}`}
+          aria-haspopup="listbox"
+          aria-expanded={isOpen}
+        >
+          <span className="truncate">{value || placeholder}</span>
+          <span className={`ml-3 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-primary/20 bg-primary/10 text-primary transition-all ${isOpen ? "bg-primary text-white rotate-180" : ""}`}>
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" aria-hidden="true">
+              <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+        </button>
+
+        {isOpen && (
+          <div className="absolute z-20 mt-2 w-full overflow-hidden rounded-xl border border-primary/15 bg-white shadow-2xl">
+            <ul role="listbox" className="max-h-64 overflow-y-auto py-1">
+              {options.map((option) => (
+                <li key={option}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onSelect(option);
+                      setOpenDropdown(null);
+                    }}
+                    className={`w-full px-4 py-3 text-left text-sm transition-colors hover:bg-primary/10 hover:text-primary ${value === option ? "bg-primary/10 font-semibold text-primary" : "text-text-dark"}`}
+                  >
+                    {option}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    );
+  };
 
   const validate = () => {
     const e: Record<string, string> = {};
@@ -78,7 +174,14 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
         </div>
         {compact && (
           <div>
-            <input type="text" placeholder="Course Interested In" value={form.course} onChange={e => setForm({ ...form, course: e.target.value })} className={inputClass} />
+            {renderCustomDropdown({
+              dropdownKey: "course",
+              value: form.course,
+              placeholder: "Course Interested In",
+              options: courseOptions,
+              dropdownRef: courseDropdownRef,
+              onSelect: (course) => setForm({ ...form, course }),
+            })}
             {errors.course && <p className={errorClass}>{errors.course}</p>}
           </div>
         )}
@@ -89,21 +192,25 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
               {errors.city && <p className={errorClass}>{errors.city}</p>}
             </div>
             <div>
-              <select value={form.stream} onChange={e => setForm({ ...form, stream: e.target.value })} className={`${inputClass} ${!form.stream ? "text-gray-400" : ""}`}>
-                <option value="">12th Stream</option>
-                <option>Science</option>
-                <option>Commerce</option>
-                <option>Arts</option>
-                <option>Other</option>
-              </select>
+              {renderCustomDropdown({
+                dropdownKey: "stream",
+                value: form.stream,
+                placeholder: "12th Stream",
+                options: streamOptions,
+                dropdownRef: streamDropdownRef,
+                onSelect: (stream) => setForm({ ...form, stream }),
+              })}
               {errors.stream && <p className={errorClass}>{errors.stream}</p>}
             </div>
             <div>
-              <select value={form.mode} onChange={e => setForm({ ...form, mode: e.target.value })} className={`${inputClass} ${!form.mode ? "text-gray-400" : ""}`}>
-                <option value="">Preferred Mode of Study</option>
-                <option>Full-Time</option>
-                <option>Distance</option>
-              </select>
+              {renderCustomDropdown({
+                dropdownKey: "mode",
+                value: form.mode,
+                placeholder: "Preferred Mode of Study",
+                options: modeOptions,
+                dropdownRef: modeDropdownRef,
+                onSelect: (mode) => setForm({ ...form, mode }),
+              })}
               {errors.mode && <p className={errorClass}>{errors.mode}</p>}
             </div>
           </>
