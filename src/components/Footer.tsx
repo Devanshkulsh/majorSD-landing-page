@@ -2,7 +2,11 @@ const links = {
   About: ["Our Story", "Leadership", "Accreditations", "Campus"],
   Programs: ["BBA AI", "BBA", "MBA", "B.Tech", "Pharmacy"],
   Admissions: ["Apply Now", "Fee Structure", "Scholarships", "FAQs"],
-  Contact: ["+91-7064666666", "enquiry@msds.ac.in", "Faridabad, Haryana"],
+  Contact: [
+    "+91-7064666666",
+    "enquiry@msds.ac.in",
+    "Farrukhabad, Uttar Pradesh",
+  ],
 };
 
 const Footer = () => (
@@ -14,7 +18,14 @@ const Footer = () => (
             <h4 className="font-bold text-sm mb-4 text-secondary">{title}</h4>
             <ul className="space-y-2">
               {items.map((item) => (
-                <li key={item}><a href="#" className="text-white/60 hover:text-white text-sm transition-colors">{item}</a></li>
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-white text-sm transition-colors"
+                  >
+                    {item}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
