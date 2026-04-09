@@ -30,11 +30,7 @@ const HeroSection = () => {
     <section className="relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1400&q=80"
-          alt=""
-          className="w-full h-full object-cover"
-        />
+        <img src="/hero.webp" alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-br from-dark/95 via-dark/85 to-dark/60" />
       </div>
 

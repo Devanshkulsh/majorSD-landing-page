@@ -29,8 +29,16 @@ const contactItems = [
   },
 ];
 
+const socialLinks = [
+  { label: "Facebook", href: "https://www.facebook.com/majorsdsuniversity" },
+  { label: "Instagram", href: "https://www.instagram.com/msds.ac.in/" },
+];
+
 const ContactSection = () => (
-  <section id="contact" className="relative py-16 md:py-20 bg-light overflow-hidden">
+  <section
+    id="contact"
+    className="relative py-16 md:py-20 bg-light overflow-hidden"
+  >
     {/* Background Glow */}
     <div className="absolute inset-0 -z-10">
       <div className="absolute top-[-120px] left-[-120px] w-[320px] h-[320px] bg-primary/15 blur-[120px] rounded-full" />
@@ -81,15 +89,18 @@ const ContactSection = () => (
 
           {/* Socials */}
           <div className="flex flex-wrap gap-3">
-            {["Facebook", "Instagram", "YouTube", "LinkedIn"].map((s) => (
+            {socialLinks.map((s) => (
               <motion.a
-                key={s}
-                href="#"
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={s.label}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="rounded-full border border-primary/15 bg-white/80 px-4 py-2 text-xs font-semibold tracking-wide text-primary shadow-sm backdrop-blur-xl transition-all hover:bg-primary hover:text-white hover:shadow-md"
               >
-                {s}
+                {s.label}
               </motion.a>
             ))}
           </div>
@@ -139,4 +150,3 @@ const ContactSection = () => (
 );
 
 export default ContactSection;
-

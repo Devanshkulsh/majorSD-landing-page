@@ -12,7 +12,9 @@ const Navbar = () => {
   }, []);
 
   const scrollToForm = () => {
-    document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById("lead-form")
+      ?.scrollIntoView({ behavior: "smooth" });
     setMenuOpen(false);
   };
 
@@ -35,24 +37,48 @@ const Navbar = () => {
       <div className="hidden lg:block bg-dark text-white text-sm py-2">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex gap-6">
-            <a href="tel:+917064666666" className="hover:text-secondary transition-colors">📞 +91-7064666666</a>
-            <a href="mailto:enquiry@msds.ac.in" className="hover:text-secondary transition-colors">📧 enquiry@msds.ac.in</a>
+            <a
+              href="tel:+917064666666"
+              className="hover:text-secondary transition-colors"
+            >
+              📞 +91-7064666666
+            </a>
+            <a
+              href="mailto:enquiry@msds.ac.in"
+              className="hover:text-secondary transition-colors"
+            >
+              📧 enquiry@msds.ac.in
+            </a>
           </div>
           <div className="flex gap-4">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-secondary">Facebook</a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-secondary">Instagram</a>
-            <a href="https://youtube.com" target="_blank" rel="noreferrer" className="hover:text-secondary">YouTube</a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-secondary">LinkedIn</a>
+            <a
+              href="https://www.facebook.com/majorsdsuniversity"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-secondary"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/msds.ac.in/"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-secondary"
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </div>
 
       {/* Main navbar */}
-      <nav className={`sticky top-0 z-50 bg-white transition-shadow duration-300 ${scrolled ? "shadow-lg" : "shadow-sm"}`}>
+      <nav
+        className={`sticky top-0 z-50 bg-white transition-shadow duration-300 ${scrolled ? "shadow-lg" : "shadow-sm"}`}
+      >
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
           <a href="/">
             <img
-              src="https://msds.ac.in/wp-content/uploads/2025/02/Logo300x75__1_-removebg-preview.png"
+              src="/logo.webp"
               alt="MSDS University Logo"
               className="h-10 md:h-12 w-auto"
             />
@@ -78,11 +104,21 @@ const Navbar = () => {
           </div>
 
           {/* Mobile hamburger */}
-          <button className="lg:hidden p-2" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+          <button
+            className="lg:hidden p-2"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
             <div className="w-6 flex flex-col gap-1.5">
-              <span className={`block h-0.5 bg-text-dark transition-transform ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-              <span className={`block h-0.5 bg-text-dark transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
-              <span className={`block h-0.5 bg-text-dark transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+              <span
+                className={`block h-0.5 bg-text-dark transition-transform ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+              />
+              <span
+                className={`block h-0.5 bg-text-dark transition-opacity ${menuOpen ? "opacity-0" : ""}`}
+              />
+              <span
+                className={`block h-0.5 bg-text-dark transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+              />
             </div>
           </button>
         </div>
@@ -107,7 +143,10 @@ const Navbar = () => {
                     {link.label}
                   </a>
                 ))}
-                <button onClick={scrollToForm} className="bg-primary text-primary-foreground py-3 rounded-full font-semibold mt-2">
+                <button
+                  onClick={scrollToForm}
+                  className="bg-primary text-primary-foreground py-3 rounded-full font-semibold mt-2"
+                >
                   Apply Now
                 </button>
               </div>
