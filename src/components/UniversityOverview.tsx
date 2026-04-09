@@ -3,6 +3,7 @@ import SectionHeading from "./SectionHeading";
 
 const bullets = [
   "Founded in 2013 | Farrukhabad, Uttar Pradesh",
+  "Fastest Growing Private University In Uttar Pradesh",
   "Approved by UGC, AICTE, PCI, INC, BCI",
   "10,000+ students enrolled across 25+ programs",
   "World-class infrastructure, smart classrooms, AI Labs",
@@ -22,7 +23,7 @@ const UniversityOverview = () => (
     <div className="container mx-auto px-4">
       <SectionHeading
         tag="About the University"
-        title="Major SD Singh University, Faridabad"
+        title="Major SD Singh University, Farrukhabad"
         align="left"
       />
 

@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import LeadForm from "./LeadForm";
 
 const highlights = [
-  { icon: "🎓", text: "3-Year Full-Time Program" },
+  { icon: "🎓", text: "Full-Time Programs" },
   { icon: "🏛️", text: "UGC-Approved University" },
+  { icon: "🚀", text: "Fastest Growing Private University In Uttar Pradesh" },
   { icon: "💼", text: "100% Guaranteed Placement" },
   { icon: "🤖", text: "AI-First Curriculum" },
   { icon: "📍", text: "Farrukhabad, Uttar Pradesh" },
@@ -65,13 +66,11 @@ const HeroSection = () => {
             </motion.h2>
 
             <motion.p
-              variants={item}
-              className="text-sm sm:text-base md:text-lg text-white/80 mb-8 sm:mb-10 max-w-2xl leading-relaxed px-2 sm:px-0"
-            >
-              Be among the first to join India's most forward-thinking BBA
-              program, blending business acumen with cutting-edge AI skills.
-              Offered by Major SD Singh University, Farrukhabad.
-            </motion.p>
+  variants={item}
+  className="text-sm sm:text-base md:text-lg text-white/80 mb-8 sm:mb-10 max-w-2xl leading-relaxed px-2 sm:px-0"
+>
+  Be among the first to join India's most forward-thinking AI-powered degree programs — BBA, BCA, MBA, and MCA — blending business, technology, and cutting-edge artificial intelligence skills. Offered by Major SD Singh University, Farrukhabad.
+</motion.p>
 
             <motion.div
               variants={item}

@@ -20,8 +20,8 @@ const courses = [
     imgPosition: "center 30%",
   },
   {
-    title: "MCA in AI & Advanced Computing",
-    desc: "Dive deep into advanced computing, AI systems, and scalable technologies shaping the future.",
+    title: "MCA in Data Science",
+    desc: "Master data science, machine learning, and advanced computing to build intelligent systems and drive data-driven innovation.",
     img: "/courses/MCA.webp",
     imgPosition: "center 22%",
   },

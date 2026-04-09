@@ -7,7 +7,7 @@ interface LeadFormProps {
 
 const LeadForm = ({ compact = false }: LeadFormProps) => {
   const [form, setForm] = useState({
-    name: "", phone: "", email: "", city: "", stream: "", mode: "",
+    name: "", phone: "", email: "", course: "", city: "", stream: "", mode: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
@@ -16,8 +16,9 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
     const e: Record<string, string> = {};
     if (!form.name.trim()) e.name = "Name is required";
     if (!/^\d{10}$/.test(form.phone)) e.phone = "Enter valid 10-digit number";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Enter valid email";
+    if (compact && !form.course.trim()) e.course = "Course is required";
     if (!compact) {
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Enter valid email";
       if (!form.city.trim()) e.city = "City is required";
       if (!form.stream) e.stream = "Select your stream";
       if (!form.mode) e.mode = "Select mode";
@@ -71,12 +72,18 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
           </div>
           {errors.phone && <p className={errorClass}>{errors.phone}</p>}
         </div>
+        <div>
+          <input type="email" placeholder="Email Address" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className={inputClass} />
+          {errors.email && <p className={errorClass}>{errors.email}</p>}
+        </div>
+        {compact && (
+          <div>
+            <input type="text" placeholder="Course Interested In" value={form.course} onChange={e => setForm({ ...form, course: e.target.value })} className={inputClass} />
+            {errors.course && <p className={errorClass}>{errors.course}</p>}
+          </div>
+        )}
         {!compact && (
           <>
-            <div>
-              <input type="email" placeholder="Email Address" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className={inputClass} />
-              {errors.email && <p className={errorClass}>{errors.email}</p>}
-            </div>
             <div>
               <input type="text" placeholder="City" value={form.city} onChange={e => setForm({ ...form, city: e.target.value })} className={inputClass} />
               {errors.city && <p className={errorClass}>{errors.city}</p>}

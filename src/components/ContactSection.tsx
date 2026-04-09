@@ -6,7 +6,7 @@ const contactItems = [
   {
     icon: "📍",
     label: "Visit campus",
-    content: "Major SD Singh University, Fatehgarh Road, Faridabad, Haryana",
+    content: "Major SD Singh University, Kanpur Road, Farrukhabad, Uttar Pradesh",
     href: "https://maps.google.com/?q=Major+SD+Singh+University",
   },
   {
