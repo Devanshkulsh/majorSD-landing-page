@@ -15,6 +15,7 @@ import VideoSection from "@/components/VideoSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import Courses from "@/components/Courses";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -23,6 +24,7 @@ const Index = () => (
     <StatsTicker />
     <WhyBBAinAI />
     <ProgramHighlights />
+    <Courses />
     <UniversityOverview />
     <PlacementSection />
     <Testimonials />
