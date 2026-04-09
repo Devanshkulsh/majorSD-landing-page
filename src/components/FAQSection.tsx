@@ -5,36 +5,44 @@ import SectionHeading from "./SectionHeading";
 
 const faqs = [
   {
-    q: "Is BBA in AI a UGC-recognized degree?",
-    a: "Yes, Major SD Singh University is UGC-approved under the UGC Act 1956. The degree is recognized nationwide, ensuring your credentials hold value in both public and private sectors.",
+    q: "Are these AI-powered programs UGC-recognized?",
+    a: "Yes, Major SD Singh University is UGC-approved under the UGC Act 1956. All programs (BBA, BCA, MBA, MCA) are recognized nationwide and valid for jobs and higher studies.",
   },
   {
-    q: "What is the eligibility for BBA AI?",
-    a: "10+2 from any recognized board with minimum 45% marks. Students from any stream (Science, Commerce, Arts) are encouraged to apply as the program starts from basics.",
+    q: "What AI-based courses are offered?",
+    a: "We offer BBA in AI & Digital Business, BCA in AI & Data Science, MBA in AI & Digital Transformation, and MCA in Data Science — all designed for future-ready careers.",
   },
   {
-    q: "Is there an entrance exam?",
-    a: "No entrance exam is required for this session. Admissions are granted directly based on your 10+2 merit and a personal counseling round.",
+    q: "What is the duration of each course?",
+    a: "BBA and BCA are 3-year undergraduate programs, while MBA and MCA are 2-year postgraduate programs.",
   },
   {
-    q: "What is the fee structure?",
-    a: "The program fee is ₹85,000 per year. We offer flexible EMI options starting at just ₹7,000/month. Merit-based scholarships up to 50% are available for eligible students.",
+    q: "What is the eligibility for BBA and BCA programs?",
+    a: "You must have completed 10+2 from any recognized board with at least 45% marks. Students from all streams (Science, Commerce, Arts) can apply.",
   },
   {
-    q: "Does the university provide placement?",
-    a: "Absolutely. We provide 100% placement assistance through our dedicated corporate cell, partnering with 50+ tech giants like TCS, Infosys, and Wipro.",
+    q: "What is the eligibility for MBA and MCA programs?",
+    a: "You need a graduation degree from a recognized university with a minimum of 45% marks. Eligibility may vary slightly depending on the program.",
   },
   {
-    q: "What AI tools will I learn?",
-    a: "You'll gain hands-on expertise in Python, TensorFlow, ChatGPT API, Power BI, SQL, Tableau, and Scikit-Learn through our industry-aligned lab sessions.",
+    q: "Is there any entrance exam for admission?",
+    a: "No entrance exam is required. Admissions are granted based on merit and a simple counseling process.",
   },
   {
-    q: "Is hostel available?",
-    a: "Yes, we provide premium separate hostels for boys and girls. Facilities include 24/7 Wi-Fi, nutritious mess meals, laundry, and indoor recreation zones.",
+    q: "What skills and tools will I learn?",
+    a: "You will gain hands-on experience with AI tools and technologies such as Python, Machine Learning, Data Science, Power BI, SQL, Tableau, and more, depending on your chosen program.",
   },
   {
-    q: "How can I apply?",
-    a: "You can apply directly via the form on this page or reach out to our admissions counselors at +91-7064666666 for a guided application process.",
+    q: "What makes these AI programs different from traditional degrees?",
+    a: "These programs combine core academics with real-world AI tools, live projects, and industry-aligned curriculum, ensuring you graduate with practical, job-ready skills.",
+  },
+  {
+    q: "Are internships included in the programs?",
+    a: "Yes, all programs include internship opportunities to provide real-world exposure and hands-on industry experience before graduation.",
+  },
+  {
+    q: "Does the university provide placement support?",
+    a: "Yes, we offer 100% placement assistance through our corporate network of 50+ companies including TCS, Infosys, Wipro, Deloitte, and more.",
   },
 ];
 
