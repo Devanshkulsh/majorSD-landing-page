@@ -76,7 +76,7 @@ const Testimonials = () => {
   const visibleTestimonials = testimonials.slice(current, current + groupSize);
 
   return (
-    <section className="relative py-12 sm:py-16 md:py-20 bg-light overflow-hidden">
+    <section id="testimonials" className="relative py-12 sm:py-16 md:py-20 bg-light overflow-hidden">
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-[-80px] left-[-80px] sm:top-[-100px] sm:left-[-100px] w-[220px] sm:w-[300px] h-[220px] sm:h-[300px] bg-primary/20 blur-3xl rounded-full" />
@@ -195,3 +195,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+

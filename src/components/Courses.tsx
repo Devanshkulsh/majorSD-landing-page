@@ -29,7 +29,7 @@ const courses = [
 
 const Courses = () => {
   return (
-    <section className="relative py-20 md:py-28 bg-dark overflow-hidden">
+    <section id="courses" className="relative py-20 md:py-28 bg-dark overflow-hidden">
       {/* 🔥 Background Glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-[-150px] left-[-150px] w-[400px] h-[400px] bg-primary/20 blur-[140px] rounded-full animate-pulse" />
@@ -116,3 +116,4 @@ const Courses = () => {
 };
 
 export default Courses;
+

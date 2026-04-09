@@ -12,7 +12,7 @@ const bullets = [
 const badges = ["UGC Approved", "NAAC", "Govt. of Uttar Pradesh", "AICTE"];
 
 const UniversityOverview = () => (
-  <section className="relative py-12 sm:py-16 md:py-20 bg-light overflow-hidden">
+  <section id="university-overview" className="relative py-12 sm:py-16 md:py-20 bg-light overflow-hidden">
     {/* Background Glow */}
     <div className="absolute inset-0 -z-10">
       <div className="absolute top-[-80px] left-[-80px] sm:top-[-100px] sm:left-[-100px] w-[220px] sm:w-[300px] h-[220px] sm:h-[300px] bg-primary/20 rounded-full blur-3xl" />
@@ -94,3 +94,4 @@ const UniversityOverview = () => (
 );
 
 export default UniversityOverview;
+

@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import StatsTicker from "@/components/StatsTicker";
-import WhyBBAinAI from "@/components/WhyBBAinAI";
+import WhyChoose from "@/components/WhyChoose";
 import ProgramHighlights from "@/components/ProgramHighlights";
 import UniversityOverview from "@/components/UniversityOverview";
 import WhoShouldApply from "@/components/WhoShouldApply";
@@ -22,7 +22,7 @@ const Index = () => (
     <Navbar />
     <HeroSection />
     <StatsTicker />
-    <WhyBBAinAI />
+    <WhyChoose />
     <ProgramHighlights />
     <Courses />
     <UniversityOverview />

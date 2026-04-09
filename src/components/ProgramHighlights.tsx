@@ -145,7 +145,7 @@ const ProgramHighlights = () => {
   };
 
   return (
-    <section className="py-16 md:py-20 bg-white">
+    <section id="program-details" className="py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4">
         <SectionHeading
           tag="Program Details"

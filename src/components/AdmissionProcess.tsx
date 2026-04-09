@@ -50,7 +50,7 @@ const steps = [
 ];
 
 const AdmissionProcess = () => (
-  <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+  <section id="admission-process" className="relative py-16 md:py-24 bg-white overflow-hidden">
     {/* Abstract Background Decoration */}
     <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 skew-x-12 transform origin-right -z-10" />
 
@@ -146,3 +146,4 @@ const AdmissionProcess = () => (
 );
 
 export default AdmissionProcess;
+

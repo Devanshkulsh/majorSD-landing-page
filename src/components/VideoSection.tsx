@@ -30,7 +30,7 @@ const VideoSection = () => {
   );
 
   return (
-    <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+    <section id="videos" className="relative py-16 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <SectionHeading tag="Campus Life" title="Experience MSDS University" />
 
@@ -112,3 +112,4 @@ const VideoSection = () => {
 };
 
 export default VideoSection;
+

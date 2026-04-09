@@ -34,8 +34,8 @@ const cards = [
   },
 ];
 
-const WhyBBAinAI = () => (
-  <section id="why-bba" className="bg-light py-16 md:py-20">
+const WhyChoose = () => (
+  <section id="why-choose" className="bg-light py-16 md:py-20">
     <div className="container mx-auto px-4">
       <SectionHeading
         tag="Future-Ready Program"
@@ -78,4 +78,4 @@ const WhyBBAinAI = () => (
   </section>
 );
 
-export default WhyBBAinAI;
+export default WhyChoose;

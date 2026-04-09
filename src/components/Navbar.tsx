@@ -16,6 +16,19 @@ const Navbar = () => {
     setMenuOpen(false);
   };
 
+  const navLinks = [
+    { label: "Why Choose", href: "#why-choose" },
+    { label: "Program Details", href: "#program-details" },
+    { label: "Courses", href: "#courses" },
+    { label: "University", href: "#university-overview" },
+    { label: "Placements", href: "#placements" },
+    { label: "Testimonials", href: "#testimonials" },
+    { label: "Admission", href: "#admission-process" },
+    { label: "FAQs", href: "#faqs" },
+    { label: "Videos", href: "#videos" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
     <>
       {/* Top info bar - desktop only */}
@@ -46,12 +59,16 @@ const Navbar = () => {
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-6">
-            <a href="#why-bba" className="text-text-dark hover:text-primary font-medium text-sm transition-colors">Why BBA AI</a>
-            <a href="#curriculum" className="text-text-dark hover:text-primary font-medium text-sm transition-colors">Curriculum</a>
-            <a href="#placements" className="text-text-dark hover:text-primary font-medium text-sm transition-colors">Placements</a>
-            <a href="#fees" className="text-text-dark hover:text-primary font-medium text-sm transition-colors">Fees</a>
-            <a href="#faqs" className="text-text-dark hover:text-primary font-medium text-sm transition-colors">FAQs</a>
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-text-dark hover:text-primary font-medium text-[13px] xl:text-sm transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
             <button
               onClick={scrollToForm}
               className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-opacity-90 transition-all"
@@ -61,7 +78,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile hamburger */}
-          <button className="md:hidden p-2" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+          <button className="lg:hidden p-2" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
             <div className="w-6 flex flex-col gap-1.5">
               <span className={`block h-0.5 bg-text-dark transition-transform ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
               <span className={`block h-0.5 bg-text-dark transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
@@ -77,14 +94,19 @@ const Navbar = () => {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="md:hidden bg-white border-t overflow-hidden"
+              className="lg:hidden bg-white border-t overflow-hidden"
             >
               <div className="flex flex-col p-4 gap-3">
-                <a href="#why-bba" onClick={() => setMenuOpen(false)} className="py-2 text-text-dark font-medium">Why BBA AI</a>
-                <a href="#curriculum" onClick={() => setMenuOpen(false)} className="py-2 text-text-dark font-medium">Curriculum</a>
-                <a href="#placements" onClick={() => setMenuOpen(false)} className="py-2 text-text-dark font-medium">Placements</a>
-                <a href="#fees" onClick={() => setMenuOpen(false)} className="py-2 text-text-dark font-medium">Fees</a>
-                <a href="#faqs" onClick={() => setMenuOpen(false)} className="py-2 text-text-dark font-medium">FAQs</a>
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="py-2 text-text-dark font-medium"
+                  >
+                    {link.label}
+                  </a>
+                ))}
                 <button onClick={scrollToForm} className="bg-primary text-primary-foreground py-3 rounded-full font-semibold mt-2">
                   Apply Now
                 </button>

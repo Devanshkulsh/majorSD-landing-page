@@ -30,7 +30,7 @@ const contactItems = [
 ];
 
 const ContactSection = () => (
-  <section className="relative py-16 md:py-20 bg-light overflow-hidden">
+  <section id="contact" className="relative py-16 md:py-20 bg-light overflow-hidden">
     {/* Background Glow */}
     <div className="absolute inset-0 -z-10">
       <div className="absolute top-[-120px] left-[-120px] w-[320px] h-[320px] bg-primary/15 blur-[120px] rounded-full" />
@@ -139,3 +139,4 @@ const ContactSection = () => (
 );
 
 export default ContactSection;
+
