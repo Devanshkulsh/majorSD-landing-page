@@ -30,7 +30,7 @@ const Index = () => (
     <Testimonials />
     <AdmissionProcess />
     <FAQSection />
-    <VideoSection />
+    {/* <VideoSection /> */}
     <ContactSection />
     <StickyMobileCTA />
     {/* Removed sections below */}

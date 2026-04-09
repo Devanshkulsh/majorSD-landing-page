@@ -37,7 +37,7 @@ const socialLinks = [
 const ContactSection = () => (
   <section
     id="contact"
-    className="relative py-16 md:py-20 bg-light overflow-hidden"
+    className="relative py-16 md:py-20 bg-white overflow-hidden"
   >
     {/* Background Glow */}
     <div className="absolute inset-0 -z-10">
