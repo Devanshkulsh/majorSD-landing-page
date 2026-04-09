@@ -16,6 +16,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Courses from "@/components/Courses";
+import BottomInfoStrip from "@/components/BottomInfoStrip";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -33,6 +34,7 @@ const Index = () => (
     {/* <VideoSection /> */}
     <ContactSection />
     <StickyMobileCTA />
+    <BottomInfoStrip />
     {/* Removed sections below */}
     {/* <WhoShouldApply /> */}
     {/* <CurriculumRoadmap /> */}
@@ -42,3 +44,4 @@ const Index = () => (
 );
 
 export default Index;
+
