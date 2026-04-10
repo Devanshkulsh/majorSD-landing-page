@@ -7,7 +7,7 @@ const companies = [
   { name: "Wipro", logo: "/logos/wipro.webp" },
   { name: "Deloitte", logo: "/logos/deloitte.webp" },
   { name: "IBM", logo: "/logos/ibm.webp" },
-  { name: "Ntechzy", logo: "/logos/ntechzy.png" },
+  { name: "Ntechzy", logo: "/logos/ntechzy2.png" },
   { name: "Amazon", logo: "/logos/amazon.webp" },
   { name: "Microsoft", logo: "/logos/microsoft.webp" },
   { name: "Cognizant", logo: "/logos/cognizant.webp" },
