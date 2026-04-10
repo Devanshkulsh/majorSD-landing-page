@@ -49,6 +49,12 @@ const steps = [
   },
 ];
 
+const scrollToForm = () => {
+    document
+      .getElementById("lead-form")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+
 const AdmissionProcess = () => (
   <section id="admission-process" className="relative py-16 md:py-24 bg-white overflow-hidden">
     {/* Abstract Background Decoration */}
@@ -137,7 +143,7 @@ const AdmissionProcess = () => (
         <h4 className="text-xl md:text-2xl font-bold mb-4 relative z-10">
           Ready to start your application?
         </h4>
-        <button className="w-full md:w-auto px-8 py-3 bg-white text-secondary hover:bg-slate-100 rounded-full font-bold transition-all transform hover:scale-105 relative z-10 shadow-xl shadow-slate-900/15">
+        <button onClick={scrollToForm} className="w-full md:w-auto px-8 py-3 bg-white text-secondary hover:bg-slate-100 rounded-full font-bold transition-all transform hover:scale-105 relative z-10 shadow-xl shadow-slate-900/15">
           Apply Now
         </button>
       </motion.div>
