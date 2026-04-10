@@ -17,6 +17,7 @@ import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Courses from "@/components/Courses";
 import BottomInfoStrip from "@/components/BottomInfoStrip";
+import ChatBot from "@/components/ChatBot";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -35,6 +36,7 @@ const Index = () => (
     <ContactSection />
     <StickyMobileCTA />
     <BottomInfoStrip />
+    <ChatBot />
     {/* Removed sections below */}
     {/* <WhoShouldApply /> */}
     {/* <CurriculumRoadmap /> */}
