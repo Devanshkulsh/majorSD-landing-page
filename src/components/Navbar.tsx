@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { scrollToLeadForm } from "@/lib/utils";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -12,9 +13,7 @@ const Navbar = () => {
   }, []);
 
   const scrollToForm = () => {
-    document
-      .getElementById("lead-form")
-      ?.scrollIntoView({ behavior: "smooth" });
+    scrollToLeadForm();
     setMenuOpen(false);
   };
 

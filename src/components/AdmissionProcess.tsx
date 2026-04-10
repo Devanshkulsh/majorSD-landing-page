@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import SectionHeading from "./SectionHeading";
+import { scrollToLeadForm } from "@/lib/utils";
 
 const steps = [
   {
@@ -49,7 +50,9 @@ const steps = [
   },
 ];
 
+
 const AdmissionProcess = () => (
+  
   <section id="admission-process" className="relative py-16 md:py-24 bg-white overflow-hidden">
     {/* Abstract Background Decoration */}
     <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 skew-x-12 transform origin-right -z-10" />
@@ -137,7 +140,10 @@ const AdmissionProcess = () => (
         <h4 className="text-xl md:text-2xl font-bold mb-4 relative z-10">
           Ready to start your application?
         </h4>
-        <button className="w-full md:w-auto px-8 py-3 bg-white text-secondary hover:bg-slate-100 rounded-full font-bold transition-all transform hover:scale-105 relative z-10 shadow-xl shadow-slate-900/15">
+        <button
+          onClick={scrollToLeadForm}
+          className="w-full md:w-auto px-8 py-3 bg-white text-secondary hover:bg-slate-100 rounded-full font-bold transition-all transform hover:scale-105 relative z-10 shadow-xl shadow-slate-900/15"
+        >
           Apply Now
         </button>
       </motion.div>

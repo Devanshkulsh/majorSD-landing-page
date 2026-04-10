@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { scrollToLeadForm } from "@/lib/utils";
 
 const steps = [
   {
@@ -78,6 +79,10 @@ const ChatBot = () => {
   const handleClick = (option: string) => {
     const updated = [...chat, { type: "user", text: option }];
     setChat(updated);
+
+    if (option === "Apply Now") {
+      scrollToLeadForm();
+    }
 
     setTyping(true);
 

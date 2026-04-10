@@ -1,3 +1,5 @@
+import { scrollToLeadForm } from "@/lib/utils";
+
 const links = {
   About: ["Our Story", "Leadership", "Accreditations", "Campus"],
   Programs: ["BBA AI", "BBA", "MBA", "B.Tech", "Pharmacy"],
@@ -21,6 +23,12 @@ const Footer = () => (
                 <li key={item}>
                   <a
                     href="#"
+                    onClick={(event) => {
+                      if (item === "Apply Now") {
+                        event.preventDefault();
+                        scrollToLeadForm();
+                      }
+                    }}
                     className="text-white/60 hover:text-white text-sm transition-colors"
                   >
                     {item}

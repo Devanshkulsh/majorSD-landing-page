@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import LeadForm from "./LeadForm";
+import { scrollToLeadForm } from "@/lib/utils";
 
 const highlights = [
   { icon: "🎓", text: "Full-Time Programs" },
@@ -95,11 +96,7 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row w-full sm:w-auto justify-center lg:justify-start gap-3 sm:gap-4 mb-8 sm:mb-10"
             >
               <button
-                onClick={() =>
-                  document
-                    .getElementById("lead-form")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={scrollToLeadForm}
                 className="w-full sm:w-auto bg-primary hover:bg-primary/90 hover:scale-105 active:scale-95 text-white px-8 py-4 sm:py-3.5 rounded-full font-semibold transition-all text-base shadow-lg shadow-primary/30 flex items-center justify-center"
               >
                 Apply Now →
