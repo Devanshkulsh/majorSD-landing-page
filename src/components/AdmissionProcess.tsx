@@ -8,7 +8,7 @@ const steps = [
       <img
         src="/admission/form.gif"
         alt="Enquiry"
-        className="w-6 h-6 object-contain"
+        className="w-14 h-14 object-contain"
       />
     ),
     title: "Enquiry Form",
@@ -19,7 +19,7 @@ const steps = [
       <img
         src="/admission/call.gif"
         alt="Counselling"
-        className="w-6 h-6 object-contain"
+        className="w-10 h-10 object-contain"
       />
     ),
     title: "Expert Counselling",
@@ -28,9 +28,9 @@ const steps = [
   {
     icon: (
       <img
-        src="/admission/upload.gif"
+        src="/admission/uploadgif1.gif"
         alt="Documents"
-        className="w-6 h-6 object-contain"
+        className="w-13 h-13 object-contain"
       />
     ),
     title: "Document Upload",
@@ -41,7 +41,7 @@ const steps = [
       <img
         src="/admission/graduation.gif"
         alt="Admission"
-        className="w-6 h-6 object-contain"
+        className="w-12 h-12 object-contain"
       />
     ),
     title: "Secure Seat",
