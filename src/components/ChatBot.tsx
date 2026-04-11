@@ -152,7 +152,7 @@ const ChatBot = () => {
           className="w-14 h-14 rounded-l-full sm:rounded-full bg-gradient-to-br from-[#E0A817] to-yellow-500 text-white shadow-xl flex items-center justify-center hover:scale-110 transition overflow-hidden"
         >
           <img
-            src="/animated/robot.gif"
+            src="https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775902469/robot_zdazi5.gif"
             alt="AI Chatbot"
             className="w-16 h-16 object-contain"
           />

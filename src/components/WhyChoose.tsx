@@ -3,32 +3,32 @@ import SectionHeading from "./SectionHeading";
 
 const cards = [
   {
-    gif: "/animated/robot.gif",
+    gif: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775902469/robot_zdazi5.gif",
     title: "AI is the Future of Business",
     desc: "AI will transform every industry; be ready to lead the change.",
   },
   {
-    gif: "/animated/wallet.gif",
+    gif: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775902464/wallet_on1q22.gif",
     title: "Highest Paying Roles",
     desc: "AI+Business professionals earn 40-60% more than traditional BBA grads.",
   },
   {
-    gif: "/animated/globe.gif",
+    gif: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775902461/globe_nnyefv.gif",
     title: "Global Career Opportunities",
     desc: "Work with MNCs, startups, and government AI initiatives worldwide.",
   },
   {
-    gif: "/animated/growth.gif",
+    gif: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775902462/growth_ba4bsk.gif",
     title: "Data-Driven Decision Making",
     desc: "Master analytics, ML, and business intelligence tools.",
   },
   {
-    gif: "/animated/trophy.gif",
+    gif: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775902463/trophy_us2kjy.gif",
     title: "Industry-Aligned Curriculum",
     desc: "Built with inputs from AI companies and industry leaders.",
   },
   {
-    gif: "/animated/handshake.gif",
+    gif: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775902464/handshake_okknik.gif",
     title: "Internship Guarantee",
     desc: "Guaranteed internship in AI-focused companies in year 2.",
   },

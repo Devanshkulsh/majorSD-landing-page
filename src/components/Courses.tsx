@@ -4,32 +4,35 @@ const courses = [
   {
     title: "BBA in AI & Digital Business",
     desc: "Master business strategy with AI-driven decision making, digital growth, and future-ready leadership.",
-    img: "/courses/BBA.webp",
+    img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903390/BBA_imgav3.webp",
     imgPosition: "center 20%",
   },
   {
     title: "BCA in AI & Data Science",
     desc: "Build strong programming foundations with machine learning, data science, and real-world AI applications.",
-    img: "/courses/BCA.webp",
+    img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903395/BCA_pyvfc2.webp",
     imgPosition: "center 25%",
   },
   {
     title: "MBA in AI & Digital Transformation",
     desc: "Lead organizations through AI-powered innovation, automation, and next-gen business transformation.",
-    img: "/courses/MBA.webp",
+    img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903400/MBA_dixidm.webp",
     imgPosition: "center 30%",
   },
   {
     title: "MCA in Data Science",
     desc: "Master data science, machine learning, and advanced computing to build intelligent systems and drive data-driven innovation.",
-    img: "/courses/MCA.webp",
+    img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903396/MCA_dltkaz.webp",
     imgPosition: "center 22%",
   },
 ];
 
 const Courses = () => {
   return (
-    <section id="courses" className="relative py-20 md:py-28 bg-dark overflow-hidden">
+    <section
+      id="courses"
+      className="relative py-20 md:py-28 bg-dark overflow-hidden"
+    >
       {/* 🔥 Background Glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-[-150px] left-[-150px] w-[400px] h-[400px] bg-primary/20 blur-[140px] rounded-full animate-pulse" />
@@ -116,4 +119,3 @@ const Courses = () => {
 };
 
 export default Courses;
-

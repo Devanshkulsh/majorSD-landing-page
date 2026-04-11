@@ -7,7 +7,7 @@ const steps = [
   {
     icon: (
       <img
-        src="/admission/form.gif"
+        src="https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904314/form_knae2x.gif"
         alt="Enquiry"
         className="w-14 h-14 object-contain"
       />
@@ -18,7 +18,7 @@ const steps = [
   {
     icon: (
       <img
-        src="/admission/call.gif"
+        src="https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904313/call_mdk3yg.gif"
         alt="Counselling"
         className="w-10 h-10 object-contain"
       />
@@ -29,7 +29,7 @@ const steps = [
   {
     icon: (
       <img
-        src="/admission/uploadgif1.gif"
+        src="https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904337/uploadgif1_xxkfph.gif"
         alt="Documents"
         className="w-13 h-13 object-contain"
       />
@@ -40,7 +40,7 @@ const steps = [
   {
     icon: (
       <img
-        src="/admission/graduation.gif"
+        src="https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904315/graduation_dvgdpn.gif"
         alt="Admission"
         className="w-12 h-12 object-contain"
       />
@@ -50,10 +50,11 @@ const steps = [
   },
 ];
 
-
 const AdmissionProcess = () => (
-  
-  <section id="admission-process" className="relative py-16 md:py-24 bg-white overflow-hidden">
+  <section
+    id="admission-process"
+    className="relative py-16 md:py-24 bg-white overflow-hidden"
+  >
     {/* Abstract Background Decoration */}
     <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 skew-x-12 transform origin-right -z-10" />
 
@@ -152,4 +153,3 @@ const AdmissionProcess = () => (
 );
 
 export default AdmissionProcess;
-

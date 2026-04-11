@@ -32,7 +32,11 @@ const HeroSection = () => {
     <section className="relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <img src="/hero.png" alt="" className="w-full h-full object-cover" />
+        <img
+          src="https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775902364/hero_ribdkz.png"
+          alt=""
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-dark/95 via-dark/85 to-dark/60" />
       </div>
 
@@ -67,11 +71,14 @@ const HeroSection = () => {
             </motion.h2>
 
             <motion.p
-  variants={item}
-  className="text-sm sm:text-base md:text-lg text-white/80 mb-8 sm:mb-10 max-w-2xl leading-relaxed px-2 sm:px-0"
->
-  Be among the first to join India's most forward-thinking AI-powered degree programs — BBA, BCA, MBA, and MCA — blending business, technology, and cutting-edge artificial intelligence skills. Offered by Major SD Singh University, Farrukhabad.
-</motion.p>
+              variants={item}
+              className="text-sm sm:text-base md:text-lg text-white/80 mb-8 sm:mb-10 max-w-2xl leading-relaxed px-2 sm:px-0"
+            >
+              Be among the first to join India's most forward-thinking
+              AI-powered degree programs — BBA, BCA, MBA, and MCA — blending
+              business, technology, and cutting-edge artificial intelligence
+              skills. Offered by Major SD Singh University, Farrukhabad.
+            </motion.p>
 
             <motion.div
               variants={item}

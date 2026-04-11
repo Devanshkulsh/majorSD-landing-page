@@ -6,64 +6,64 @@ const testimonials = [
   {
     name: "Rohit Saxena",
     role: "Alumni, Batch of 2022",
-    initials: "RS",
-    color: "bg-blue-100 text-blue-700",
+    avatar:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904142/boy_mul3fl.gif",
     text: "The campus infrastructure is world-class. State-of-the-art labs, modern classrooms, and a library that truly supports deep research — everything a student needs.",
   },
   {
     name: "Dr. Deepa Malhotra",
     role: "Visiting Professor",
-    initials: "DM",
-    color: "bg-green-100 text-green-700",
+    avatar:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904144/girl_ronvmv.gif",
     text: "Our faculty brings decades of industry experience into the classroom. The mentorship culture here is unlike anything I've seen at other institutions.",
   },
   {
     name: "Aakash Kumar",
     role: "HR Partner, TechCorp India",
-    initials: "AK",
-    color: "bg-amber-100 text-amber-700",
+    avatar:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904142/boy_mul3fl.gif",
     text: "The placement cell is incredibly proactive. With 300+ industry partners and dedicated career coaches, graduates are well-prepared for the job market.",
   },
   {
     name: "Sneha Iyer",
     role: "Current Student, 3rd Year",
-    initials: "SI",
-    color: "bg-purple-100 text-purple-700",
+    avatar:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904144/girl_ronvmv.gif",
     text: "Campus life here is vibrant — fests, hackathons, sports events, and cultural clubs. There's never a dull moment, and it shapes you beyond academics.",
   },
   {
     name: "Vikram Nair",
     role: "Parent of Graduate",
-    initials: "VN",
-    color: "bg-rose-100 text-rose-700",
+    avatar:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904142/boy_mul3fl.gif",
     text: "As a parent, I was impressed by the transparent communication, safe campus environment, and the genuine care faculty shows for every student's growth.",
   },
   {
     name: "Priya Joshi",
     role: "Research Scholar",
-    initials: "PJ",
-    color: "bg-teal-100 text-teal-700",
+    avatar:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904144/girl_ronvmv.gif",
     text: "The research facilities and funding support are excellent. I've had the opportunity to publish two papers in my first year itself — truly research-driven.",
   },
   {
     name: "Manish Tiwari",
     role: "Industry Guest Lecturer",
-    initials: "MT",
-    color: "bg-orange-100 text-orange-700",
+    avatar:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904142/boy_mul3fl.gif",
     text: "Every time I visit for guest sessions, I'm struck by how curious and engaged the students are. The university fosters a real hunger for learning.",
   },
   {
     name: "Kavita Rao",
     role: "Alumni, Batch of 2020",
-    initials: "KR",
-    color: "bg-indigo-100 text-indigo-700",
+    avatar:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904144/girl_ronvmv.gif",
     text: "The alumni network is strong and very supportive. I got my first international opportunity through a connection I made right here on campus.",
   },
   {
     name: "Aryan Desai",
     role: "Startup Founder, Ex-Student",
-    initials: "AD",
-    color: "bg-cyan-100 text-cyan-700",
+    avatar:
+      "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775904142/boy_mul3fl.gif",
     text: "The entrepreneurship cell gave my startup its first push. Mentorship, seed funding support, and co-working space — the university genuinely backs innovation.",
   },
 ];
@@ -75,7 +75,7 @@ const Testimonials = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) =>
-        prev + groupSize >= testimonials.length ? 0 : prev + groupSize
+        prev + groupSize >= testimonials.length ? 0 : prev + groupSize,
       );
     }, 4500);
     return () => clearInterval(timer);
@@ -117,7 +117,11 @@ const Testimonials = () => {
                   key={t.name}
                   initial={{ opacity: 0, scale: 0.92 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: i * 0.12, duration: 0.5, ease: "easeOut" }}
+                  transition={{
+                    delay: i * 0.12,
+                    duration: 0.5,
+                    ease: "easeOut",
+                  }}
                   className="bg-white/80 backdrop-blur-xl border border-white/30 rounded-2xl p-6 shadow-xl"
                   style={{ willChange: "transform, opacity" }}
                 >
@@ -128,12 +132,11 @@ const Testimonials = () => {
                   </p>
 
                   <div className="flex items-center gap-3">
-                    {/* Avatar with initials instead of img */}
-                    <div
-                      className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-semibold flex-shrink-0 ${t.color}`}
-                    >
-                      {t.initials}
-                    </div>
+                    <img
+                      src={t.avatar}
+                      alt={t.name}
+                      className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                    />
                     <div>
                       <p className="font-semibold text-sm text-text-dark">
                         {t.name}
@@ -166,11 +169,11 @@ const Testimonials = () => {
               </p>
 
               <div className="flex items-center gap-3">
-                <div
-                  className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-semibold flex-shrink-0 ${testimonials[current].color}`}
-                >
-                  {testimonials[current].initials}
-                </div>
+                <img
+                  src={testimonials[current].avatar}
+                  alt={testimonials[current].name}
+                  className="w-9 h-9 rounded-full object-cover flex-shrink-0"
+                />
                 <div>
                   <p className="font-semibold text-xs sm:text-sm text-text-dark">
                     {testimonials[current].name}

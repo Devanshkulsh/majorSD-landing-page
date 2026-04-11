@@ -2,19 +2,58 @@ import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
 const companies = [
-  { name: "TCS", logo: "/logos/tcs.webp" },
-  { name: "Infosys", logo: "/logos/infosys.webp" },
-  { name: "Wipro", logo: "/logos/wipro.webp" },
-  { name: "Deloitte", logo: "/logos/deloitte.webp" },
-  { name: "IBM", logo: "/logos/ibm.webp" },
-  { name: "Ntechzy", logo: "/logos/ntechzy2.png" },
-  { name: "Amazon", logo: "/logos/amazon.webp" },
-  { name: "Microsoft", logo: "/logos/microsoft.webp" },
-  { name: "Cognizant", logo: "/logos/cognizant.webp" },
-  { name: "Accenture", logo: "/logos/accenture.webp" },
-  { name: "KPMG", logo: "/logos/kpmg.webp" },
-  { name: "Google", logo: "/logos/google.webp" },
-  { name: "HCL", logo: "/logos/hcl.webp" },
+  {
+    name: "TCS",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903582/tcs_zajdn5.webp",
+  },
+  {
+    name: "Infosys",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903577/infosys_r35oac.webp",
+  },
+  {
+    name: "Wipro",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903584/wipro_uejbe7.webp",
+  },
+  {
+    name: "Deloitte",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903573/deloitte_v6qa81.webp",
+  },
+  {
+    name: "IBM",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903576/ibm_luaawy.webp",
+  },
+  {
+    name: "Ntechzy",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903581/ntechzy2_sgiij7.png",
+  },
+  {
+    name: "Amazon",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903571/amazon_ct7ul6.webp",
+  },
+  {
+    name: "Microsoft",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903579/microsoft_qlx2wi.webp",
+  },
+  {
+    name: "Cognizant",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903572/cognizant_erc6fb.webp",
+  },
+  {
+    name: "Accenture",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903571/accenture_uq11qi.webp",
+  },
+  {
+    name: "KPMG",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903578/kpmg_scuvak.webp",
+  },
+  {
+    name: "Google",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903574/google_kqqi2c.webp",
+  },
+  {
+    name: "HCL",
+    logo: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903575/hcl_zyk3yn.webp",
+  },
 ];
 
 const roles = [

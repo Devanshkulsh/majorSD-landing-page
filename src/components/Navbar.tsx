@@ -77,7 +77,7 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
           <a href="/">
             <img
-              src="/logo.webp"
+              src="https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775902255/logo_aabxbt.webp"
               alt="MSDS University Logo"
               className="h-10 md:h-12 w-auto"
             />

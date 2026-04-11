@@ -41,7 +41,7 @@ const UniversityOverview = () => (
           <div className="absolute -inset-1 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition" />
 
           <img
-            src="/campus.webp"
+            src="https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903519/campus_rysbvs.webp"
             alt="MSDS University Campus"
             className="relative rounded-2xl w-full h-[220px] sm:h-[280px] md:h-[400px] object-cover shadow-2xl border border-white/20"
           />
