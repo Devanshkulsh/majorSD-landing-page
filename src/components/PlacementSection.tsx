@@ -98,6 +98,12 @@ const PlacementSection = () => (
         </motion.div>
       </div>
 
+      <div className="mb-8 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 px-4 py-4 shadow-sm sm:mb-10 sm:px-6 sm:py-5">
+        <p className="text-center text-sm font-semibold leading-relaxed text-text-dark sm:text-base md:text-lg">
+          Even after completing your course, you will receive <span className="text-primary">placement assistance for up to 5 years</span>, so you stay supported at every stage of your career growth.
+        </p>
+      </div>
+
       {/* Role cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
         {roles.map((r, i) => (

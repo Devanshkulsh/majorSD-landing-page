@@ -4,25 +4,25 @@ const courses = [
   {
     title: "BBA in AI & Digital Business",
     desc: "Master business strategy with AI-driven decision making, digital growth, and future-ready leadership.",
-    img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903390/BBA_imgav3.webp",
+    img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1776072275/BBA2_bqf20o.png",
     imgPosition: "center 20%",
   },
   {
     title: "BCA in AI & Data Science",
     desc: "Build strong programming foundations with machine learning, data science, and real-world AI applications.",
-    img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903395/BCA_pyvfc2.webp",
+    img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1776072275/BCA2_p4gfg5.png",
     imgPosition: "center 25%",
   },
   {
     title: "MBA in AI & Digital Transformation",
     desc: "Lead organizations through AI-powered innovation, automation, and next-gen business transformation.",
-    img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903400/MBA_dixidm.webp",
+    img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1776072275/MBA2_lmxjqq.png",
     imgPosition: "center 30%",
   },
   {
     title: "MCA in Data Science",
     desc: "Master data science, machine learning, and advanced computing to build intelligent systems and drive data-driven innovation.",
-    img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1775903396/MCA_dltkaz.webp",
+    img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1776072282/MCA1_vc7whs.png",
     imgPosition: "center 22%",
   },
 ];

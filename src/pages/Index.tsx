@@ -18,6 +18,8 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Courses from "@/components/Courses";
 import BottomInfoStrip from "@/components/BottomInfoStrip";
 import ChatBot from "@/components/ChatBot";
+import LeadersSection from "@/components/LeadersSection";
+import CampusLifeSection from "@/components/CampusLifeSection";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -29,7 +31,9 @@ const Index = () => (
     <Courses />
     <UniversityOverview />
     <PlacementSection />
+    <LeadersSection />
     <Testimonials />
+    <CampusLifeSection />
     <AdmissionProcess />
     <FAQSection />
     {/* <VideoSection /> */}
