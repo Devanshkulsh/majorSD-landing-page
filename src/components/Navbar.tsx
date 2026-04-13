@@ -18,12 +18,14 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { label: "Why Choose", href: "#why-choose" },
-    { label: "Program Details", href: "#program-details" },
+    { label: "Why AI", href: "#why-choose" },
+    { label: "Program", href: "#program-details" },
     { label: "Courses", href: "#courses" },
     { label: "University", href: "#university-overview" },
     { label: "Placements", href: "#placements" },
-    { label: "Testimonials", href: "#testimonials" },
+    { label: "Leaders", href: "#leaders" },
+    { label: "Reviews", href: "#testimonials" },
+    { label: "Campus", href: "#campus-life" },
     { label: "Admission", href: "#admission-process" },
     { label: "FAQs", href: "#faqs" },
     // { label: "Videos", href: "#videos" },
@@ -40,13 +42,13 @@ const Navbar = () => {
               href="tel:+916387236091"
               className="hover:text-secondary transition-colors"
             >
-              📞 +91-6387236091
+              Call: +91-6387236091
             </a>
             <a
               href="mailto:enquiry@msds.ac.in"
               className="hover:text-secondary transition-colors"
             >
-              📧 enquiry@msds.ac.in
+              Email: enquiry@msds.ac.in
             </a>
           </div>
           <div className="flex gap-4">
@@ -158,3 +160,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

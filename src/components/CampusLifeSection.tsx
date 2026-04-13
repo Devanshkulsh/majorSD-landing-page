@@ -11,7 +11,7 @@ const images = [
 
 const CampusLifeSection = () => {
   return (
-    <section className="bg-white py-14 sm:py-16 md:py-24">
+    <section id="campus-life" className="bg-white py-14 sm:py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="mx-auto mb-10 max-w-4xl text-center sm:mb-12 md:mb-16">

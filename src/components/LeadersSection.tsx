@@ -35,7 +35,7 @@ const leaders = [
 
 const LeadersSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section id="leaders" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12 md:mb-16">
