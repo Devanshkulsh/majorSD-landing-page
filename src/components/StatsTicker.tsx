@@ -5,7 +5,7 @@ const stats = [
   { value: 15, suffix: "+", label: "Years of Excellence" },
   { value: 10000, suffix: "+", label: "Alumni Network" },
   { value: 50, suffix: "+", label: "Industry Partners" },
-  { value: 95, suffix: "%", label: "Placement Rate" },
+  { value: 100, suffix: "%", label: "Placement Rate" },
   { value: 25, suffix: "+", label: "Specializations" },
 ];
 

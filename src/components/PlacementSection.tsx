@@ -56,18 +56,6 @@ const companies = [
   },
 ];
 
-const roles = [
-  { title: "AI Business Analyst", salary: "₹6–12 LPA" },
-  { title: "Data Scientist / Analyst", salary: "₹8–18 LPA" },
-  { title: "Software Developer (AI)", salary: "₹6–15 LPA" },
-  { title: "Product Manager (AI)", salary: "₹10–25 LPA" },
-  { title: "AI Consultant / Specialist", salary: "₹12–30 LPA" },
-  { title: "Digital Transformation Manager", salary: "₹8–20 LPA" },
-  { title: "Machine Learning Engineer", salary: "₹10–22 LPA" },
-  { title: "Entrepreneur / Startup Founder", salary: "Unlimited" },
-  { title: "Business Intelligence (BI) Analyst", salary: "₹6–14 LPA" },
-];
-
 const PlacementSection = () => (
   <section id="placements" className="py-12 sm:py-16 md:py-20 bg-white">
     <div className="container mx-auto px-4">
@@ -100,30 +88,12 @@ const PlacementSection = () => (
 
       <div className="mb-8 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 px-4 py-4 shadow-sm sm:mb-10 sm:px-6 sm:py-5">
         <p className="text-center text-sm font-semibold leading-relaxed text-text-dark sm:text-base md:text-lg">
-          Even after completing your course, you will receive <span className="text-primary">placement assistance for up to 5 years</span>, so you stay supported at every stage of your career growth.
+          Even after completing your course, you will receive{" "}
+          <span className="text-primary">
+            placement assistance for up to 5 years
+          </span>
+          , so you stay supported at every stage of your career growth.
         </p>
-      </div>
-
-      {/* Role cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-        {roles.map((r, i) => (
-          <motion.div
-            key={r.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.08 }}
-            className="bg-dark rounded-xl p-4 sm:p-6 text-white relative overflow-hidden group"
-          >
-            <div className="absolute top-0 left-0 w-full h-1 bg-primary" />
-            <h3 className="font-bold text-base sm:text-lg mb-1 sm:mb-2">
-              {r.title}
-            </h3>
-            <p className="text-secondary font-bold text-lg sm:text-xl">
-              {r.salary}
-            </p>
-          </motion.div>
-        ))}
       </div>
     </div>
   </section>
