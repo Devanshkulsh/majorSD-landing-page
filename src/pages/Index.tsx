@@ -13,7 +13,6 @@ import AdmissionProcess from "@/components/AdmissionProcess";
 import FAQSection from "@/components/FAQSection";
 import VideoSection from "@/components/VideoSection";
 import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Courses from "@/components/Courses";
 import BottomInfoStrip from "@/components/BottomInfoStrip";
