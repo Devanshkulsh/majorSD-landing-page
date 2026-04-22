@@ -19,6 +19,17 @@ const BottomInfoStrip = () => (
         Apply now
       </button>
     </div>
+    <p className="border-t border-red-500/60 px-3 py-1 text-center text-[10px] font-medium sm:text-[11px]">
+      Developed &amp; maintained by{" "}
+      <a
+        href="https://ntechzy.in"
+        target="_blank"
+        rel="noreferrer"
+        className="font-bold hover:opacity-90"
+      >
+        Ntechzy
+      </a>
+    </p>
   </div>
 );
 
