@@ -15,6 +15,7 @@ import VideoSection from "@/components/VideoSection";
 import ContactSection from "@/components/ContactSection";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Courses from "@/components/Courses";
+import MoreCourses from "@/components/MoreCourses";
 import BottomInfoStrip from "@/components/BottomInfoStrip";
 import ChatBot from "@/components/ChatBot";
 import LeadersSection from "@/components/LeadersSection";
@@ -34,6 +35,7 @@ const Index = () => (
     <Testimonials />
     <CampusLifeSection />
     <AdmissionProcess />
+    <MoreCourses />
     <FAQSection />
     {/* <VideoSection /> */}
     <ContactSection />
