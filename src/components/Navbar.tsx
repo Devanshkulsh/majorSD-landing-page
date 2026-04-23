@@ -27,6 +27,7 @@ const Navbar = () => {
     { label: "Reviews", href: "#testimonials" },
     { label: "Campus", href: "#campus-life" },
     { label: "Admission", href: "#admission-process" },
+    { label: "More Courses", href: "#more-courses" },
     { label: "FAQs", href: "#faqs" },
     // { label: "Videos", href: "#videos" },
     { label: "Contact", href: "#contact" },
@@ -86,12 +87,12 @@ const Navbar = () => {
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+          <div className="hidden lg:flex flex-1 items-center justify-end gap-3 xl:gap-5 whitespace-nowrap">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-text-dark hover:text-primary font-medium text-[13px] xl:text-sm transition-colors"
+                className="text-text-dark hover:text-primary font-medium text-xs xl:text-sm transition-colors whitespace-nowrap"
               >
                 {link.label}
               </a>

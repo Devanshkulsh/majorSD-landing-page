@@ -266,7 +266,10 @@ const MoreCourses = () => {
   const sliderValue = useMemo(() => [activeSlide + 1], [activeSlide]);
 
   return (
-    <section id="more-courses" className="relative py-16 md:py-20 bg-white overflow-hidden">
+    <section
+      id="more-courses"
+      className="relative py-16 md:py-20 bg-white overflow-hidden"
+    >
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-[-120px] left-[-120px] h-[280px] w-[280px] rounded-full bg-primary/15 blur-3xl" />
         <div className="absolute bottom-[-120px] right-[-120px] h-[280px] w-[280px] rounded-full bg-secondary/20 blur-3xl" />
@@ -287,7 +290,8 @@ const MoreCourses = () => {
             Explore More Courses
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Browse faculty-wise programs from Ayurveda, Nursing, Engineering, Science, Social Science and more.
+            Browse faculty-wise programs from Ayurveda, Nursing, Engineering,
+            Science, Social Science and more.
           </p>
         </motion.div>
 
@@ -295,7 +299,10 @@ const MoreCourses = () => {
           <Carousel setApi={setApi} opts={{ align: "start", loop: true }}>
             <CarouselContent>
               {facultyData.map((faculty, idx) => (
-                <CarouselItem key={faculty.name} className="md:basis-1/2 xl:basis-1/3">
+                <CarouselItem
+                  key={faculty.name}
+                  className="md:basis-1/2 xl:basis-1/3"
+                >
                   <motion.article
                     initial={{ opacity: 0, y: 36 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -305,7 +312,9 @@ const MoreCourses = () => {
                   >
                     <div className="flex items-start justify-between gap-3 mb-5">
                       <div>
-                        <h3 className="text-lg font-bold leading-snug text-text-dark">{faculty.name}</h3>
+                        <h3 className="text-lg font-bold leading-snug text-text-dark">
+                          {faculty.name}
+                        </h3>
                         <p className="mt-2 inline-flex items-center rounded-full bg-primary/8 px-3 py-1 text-xs font-semibold text-primary">
                           <BookOpen className="h-3.5 w-3.5 mr-1.5" />
                           {faculty.courses.length} Programs
@@ -318,8 +327,13 @@ const MoreCourses = () => {
 
                     <div className="space-y-3">
                       {faculty.courses.slice(0, 4).map((course) => (
-                        <div key={`${faculty.name}-${course.name}`} className="rounded-xl border border-secondary/20 bg-light px-3.5 py-3">
-                          <p className="text-sm font-semibold text-text-dark leading-snug">{course.name}</p>
+                        <div
+                          key={`${faculty.name}-${course.name}`}
+                          className="rounded-xl border border-secondary/20 bg-light px-3.5 py-3"
+                        >
+                          <p className="text-sm font-semibold text-text-dark leading-snug">
+                            {course.name}
+                          </p>
                           <div className="mt-2 flex items-center gap-2 text-xs text-muted-foreground">
                             <Clock3 className="h-3.5 w-3.5 text-primary" />
                             <span>{course.duration}</span>
@@ -330,8 +344,9 @@ const MoreCourses = () => {
 
                     {faculty.courses.length > 4 && (
                       <p className="mt-4 inline-flex items-center text-xs font-semibold text-primary">
-                        <Sparkles className="mr-1.5 h-3.5 w-3.5" />
-                        +{faculty.courses.length - 4} more programs in this faculty
+                        <Sparkles className="mr-1.5 h-3.5 w-3.5" />+
+                        {faculty.courses.length - 4} more programs in this
+                        faculty
                       </p>
                     )}
 
