@@ -1,9 +1,11 @@
-import { type RefObject, useEffect, useRef, useState } from "react";
+import { type FormEvent, type RefObject, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 interface LeadFormProps {
   compact?: boolean;
 }
+
+const GOOGLE_SHEETS_WEB_APP_URL = import.meta.env.VITE_GOOGLE_SHEETS_WEB_APP_URL || "";
 
 const LeadForm = ({ compact = false }: LeadFormProps) => {
   const courseOptions = [
@@ -19,6 +21,8 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [openDropdown, setOpenDropdown] = useState<"course" | "stream" | "mode" | null>(null);
   const courseDropdownRef = useRef<HTMLDivElement | null>(null);
   const streamDropdownRef = useRef<HTMLDivElement | null>(null);
@@ -123,11 +127,42 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (validate()) {
-      console.log("Form submitted:", form);
+    setSubmitError("");
+
+    if (!validate()) return;
+
+    if (!GOOGLE_SHEETS_WEB_APP_URL) {
+      setSubmitError("Google Sheets endpoint is not configured yet.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      await fetch(GOOGLE_SHEETS_WEB_APP_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+        body: JSON.stringify({
+          ...form,
+          formType: compact ? "callback" : "counselling",
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+
       setSubmitted(true);
+      setForm({
+        name: "", phone: "", email: "", course: "", city: "", stream: "", mode: "",
+      });
+    } catch (error) {
+      console.error("Lead form submission failed:", error);
+      setSubmitError("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -215,8 +250,9 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
             </div>
           </>
         )}
-        <button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3.5 rounded-lg transition-all text-sm">
-          {compact ? "Get Callback →" : "Get Free Counselling →"}
+        {submitError && <p className="rounded-lg bg-red-50 px-3 py-2 text-center text-xs font-medium text-red-600">{submitError}</p>}
+        <button type="submit" disabled={isSubmitting} className="w-full bg-primary hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-70 text-white font-semibold py-3.5 rounded-lg transition-all text-sm">
+          {isSubmitting ? "Submitting..." : compact ? "Get Callback →" : "Get Free Counselling →"}
         </button>
         <p className="text-xs text-center text-muted-foreground">🔒 Your data is safe and secure with us</p>
       </form>
