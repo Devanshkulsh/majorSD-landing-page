@@ -141,9 +141,8 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
     setIsSubmitting(true);
 
     try {
-      await fetch(GOOGLE_SHEETS_WEB_APP_URL, {
+      const response = await fetch(GOOGLE_SHEETS_WEB_APP_URL, {
         method: "POST",
-        mode: "no-cors",
         headers: {
           "Content-Type": "text/plain;charset=utf-8",
         },
@@ -154,13 +153,17 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
         }),
       });
 
+      if (!response.ok) {
+        throw new Error(`Google Sheets submission failed with status ${response.status}`);
+      }
+
       setSubmitted(true);
       setForm({
         name: "", phone: "", email: "", course: "", city: "", stream: "", mode: "",
       });
     } catch (error) {
       console.error("Lead form submission failed:", error);
-      setSubmitError("Something went wrong. Please try again.");
+      setSubmitError("Unable to submit your details. Please try again or call us directly.");
     } finally {
       setIsSubmitting(false);
     }
