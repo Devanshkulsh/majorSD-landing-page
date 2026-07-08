@@ -20,8 +20,8 @@ const courses = [
     imgPosition: "center 30%",
   },
   {
-    title: "MCA in Data Science",
-    desc: "Master data science, machine learning, and advanced computing to build intelligent systems and drive data-driven innovation.",
+    title: "MCA in AI & Advanced Computing",
+    desc: "Master advanced computing, data science and machine learning to build intelligent systems and drive data-driven innovation.",
     img: "https://res.cloudinary.com/dhlqc0ymy/image/upload/v1776072282/MCA1_vc7whs.png",
     imgPosition: "center 22%",
   },

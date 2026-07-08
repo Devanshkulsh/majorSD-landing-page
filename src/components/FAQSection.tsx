@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: "What AI-based courses are offered?",
-    a: "We offer BBA in AI & Digital Business, BCA in AI & Data Science, MBA in AI & Digital Transformation, and MCA in Data Science — all designed for future-ready careers.",
+    a: "We offer BBA in AI & Digital Business, BCA in AI & Data Science, MBA in AI & Digital Transformation, and MCA in AI & Advanced Computing — all designed for future-ready careers.",
   },
   {
     q: "What is the duration of each course?",

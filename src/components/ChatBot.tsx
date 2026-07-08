@@ -9,7 +9,7 @@ const steps = [
       "BBA in AI & Digital Business",
       "BCA in AI & Data Science",
       "MBA in AI & Digital Transformation",
-      "MCA in Data Science",
+      "MCA in AI & Advanced Computing",
     ],
   },
   {
