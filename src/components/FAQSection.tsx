@@ -162,7 +162,7 @@ const FAQSection = () => {
           <h4 className="relative z-10 text-lg font-bold text-white">Still have questions?</h4>
           <p className="relative z-10 text-white/80 mb-6">Our admissions team is here to help you 24/7.</p>
           <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+917064666666" className="px-6 py-3 bg-white text-secondary rounded-full font-bold hover:bg-slate-100 transition-all">
+            <a href="tel:+919554964646" className="px-6 py-3 bg-white text-secondary rounded-full font-bold hover:bg-slate-100 transition-all">
               Call Support
             </a>
             <a href="#contact" className="px-6 py-3 bg-white/10 text-white rounded-full font-bold border border-white/20 hover:bg-white/20 transition-all">

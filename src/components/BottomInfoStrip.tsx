@@ -3,8 +3,8 @@ import { scrollToLeadForm } from "@/lib/utils";
 const BottomInfoStrip = () => (
   <div className="fixed bottom-0 left-0 right-0 z-40 bg-red-600 text-white shadow-[0_-3px_10px_rgba(0,0,0,0.15)] md:static md:shadow-none">
     <div className="mx-auto flex min-h-12 max-w-7xl items-center justify-between gap-2 px-3 py-2 text-[11px] font-semibold sm:text-xs md:min-h-14 md:px-6 md:text-sm">
-      <a href="tel:+916387236091" className="whitespace-nowrap hover:opacity-90">
-        +91-6387236091
+      <a href="tel:+919554964646" className="whitespace-nowrap hover:opacity-90">
+        +91-9554964646
       </a>
       <div className="flex min-w-0 items-center justify-center gap-2 text-center">
         <span className="hidden truncate sm:inline">100% Guaranteed Placement</span>

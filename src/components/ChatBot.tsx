@@ -112,7 +112,7 @@ const ChatBot = () => {
       )
       .join("\n");
 
-    return `https://wa.me/916387236091?text=${encodeURIComponent(msg)}`;
+    return `https://wa.me/919554964646?text=${encodeURIComponent(msg)}`;
   };
 
   return (
@@ -220,7 +220,7 @@ const ChatBot = () => {
             {step >= steps.length && (
               <div className="p-3 border-t flex gap-2">
                 <a
-                  href="tel:+916387236091"
+                  href="tel:+919554964646"
                   className="flex-1 text-center bg-[#E0A817] text-white py-2 rounded-full text-sm font-semibold hover:scale-105 transition"
                 >
                   Call 📞

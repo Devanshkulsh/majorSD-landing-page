@@ -40,10 +40,10 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex gap-6">
             <a
-              href="tel:+916387236091"
-              className="hover:text-secondary transition-colors"
-            >
-              Call: +91-6387236091
+              href="tel:+919554964646"
+            className="hover:text-secondary transition-colors"
+          >
+              Call: +91-9554964646
             </a>
             <a
               href="mailto:enquiry@msds.ac.in"

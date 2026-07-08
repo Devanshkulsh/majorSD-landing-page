@@ -12,8 +12,8 @@ const contactItems = [
   {
     icon: "📞",
     label: "Call admissions",
-    content: "+91-6387236091",
-    href: "tel:+916387236091",
+    content: "+91-9554964646",
+    href: "tel:+919554964646",
   },
   {
     icon: "📧",
