@@ -13,7 +13,6 @@ import AdmissionProcess from "@/components/AdmissionProcess";
 import FAQSection from "@/components/FAQSection";
 import VideoSection from "@/components/VideoSection";
 import ContactSection from "@/components/ContactSection";
-import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Courses from "@/components/Courses";
 import MoreCourses from "@/components/MoreCourses";
 import BottomInfoStrip from "@/components/BottomInfoStrip";
@@ -39,7 +38,6 @@ const Index = () => (
     <FAQSection />
     {/* <VideoSection /> */}
     <ContactSection />
-    <StickyMobileCTA />
     <BottomInfoStrip />
     <ChatBot />
     {/* Removed sections below */}
