@@ -15,7 +15,7 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
     "MCA in AI & Advanced Computing",
   ];
   const streamOptions = ["Science", "Commerce", "Arts", "Other"];
-  const modeOptions = ["Full-Time", "Distance"];
+  const modeOptions = ["Full-Time"];
   const [form, setForm] = useState({
     name: "", phone: "", email: "", course: "", city: "", stream: "", mode: "",
   });

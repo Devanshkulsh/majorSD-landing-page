@@ -64,7 +64,7 @@ const HeroSection = () => {
                 Admission Alert
               </span>
               <span className="text-sm font-semibold text-white sm:text-base">
-                Last date: <span className="text-secondary">20 June</span>
+                Last date: <span className="text-secondary">5 August 2026</span>
               </span>
             </motion.div>
 
