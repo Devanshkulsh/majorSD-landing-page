@@ -14,7 +14,7 @@ const BottomInfoStrip = () => (
         <div className="hidden min-w-0 items-center justify-center gap-2 text-center md:flex">
           <span className="hidden truncate sm:inline">100% Guaranteed Placement</span>
           <span className="hidden rounded-full bg-yellow-400 px-2.5 py-1 text-[9px] font-extrabold uppercase tracking-[0.18em] text-red-700 shadow-sm sm:px-3 sm:text-[10px] md:inline md:text-[11px]">
-            Last date: 5 August 2026
+            Last date: 19 August 2026
           </span>
         </div>
         <button
@@ -27,7 +27,7 @@ const BottomInfoStrip = () => (
     </div>
     <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-1 border-t border-red-500/60 px-3 pb-16 pt-2 text-center sm:flex-row sm:gap-3 md:py-2">
       <span className="rounded-full bg-yellow-400 px-2.5 py-1 text-[9px] font-extrabold uppercase tracking-[0.18em] text-red-700 shadow-sm sm:px-3 sm:text-[10px] md:hidden">
-        Last date: 5 August 2026
+        Last date: 19 August 2026
       </span>
       <p className="text-[10px] font-medium sm:text-[11px]">
         Developed &amp; maintained by{" "}
