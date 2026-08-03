@@ -15,26 +15,23 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
     "MCA in AI & Advanced Computing",
   ];
   const streamOptions = ["Science", "Commerce", "Arts", "Other"];
-  const modeOptions = ["Full-Time"];
   const [form, setForm] = useState({
-    name: "", phone: "", email: "", course: "", city: "", stream: "", mode: "",
+    name: "", phone: "", email: "", course: "", city: "", stream: "", mode: "Full-Time",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
-  const [openDropdown, setOpenDropdown] = useState<"course" | "stream" | "mode" | null>(null);
+  const [openDropdown, setOpenDropdown] = useState<"course" | "stream" | null>(null);
   const courseDropdownRef = useRef<HTMLDivElement | null>(null);
   const streamDropdownRef = useRef<HTMLDivElement | null>(null);
-  const modeDropdownRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Node;
       const isInsideDropdown =
         courseDropdownRef.current?.contains(target) ||
-        streamDropdownRef.current?.contains(target) ||
-        modeDropdownRef.current?.contains(target);
+        streamDropdownRef.current?.contains(target);
 
       if (!isInsideDropdown) {
         setOpenDropdown(null);
@@ -62,7 +59,7 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
     onSelect,
     dropdownRef,
   }: {
-    dropdownKey: "course" | "stream" | "mode";
+    dropdownKey: "course" | "stream";
     value: string;
     placeholder: string;
     options: string[];
@@ -121,7 +118,6 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
     if (!compact) {
       if (!form.city.trim()) e.city = "City is required";
       if (!form.stream) e.stream = "Select your stream";
-      if (!form.mode) e.mode = "Select mode";
     }
     setErrors(e);
     return Object.keys(e).length === 0;
@@ -159,7 +155,7 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
 
       setSubmitted(true);
       setForm({
-        name: "", phone: "", email: "", course: "", city: "", stream: "", mode: "",
+        name: "", phone: "", email: "", course: "", city: "", stream: "", mode: "Full-Time",
       });
     } catch (error) {
       console.error("Lead form submission failed:", error);
@@ -239,17 +235,6 @@ const LeadForm = ({ compact = false }: LeadFormProps) => {
                 onSelect: (stream) => setForm({ ...form, stream }),
               })}
               {errors.stream && <p className={errorClass}>{errors.stream}</p>}
-            </div>
-            <div>
-              {renderCustomDropdown({
-                dropdownKey: "mode",
-                value: form.mode,
-                placeholder: "Preferred Mode of Study",
-                options: modeOptions,
-                dropdownRef: modeDropdownRef,
-                onSelect: (mode) => setForm({ ...form, mode }),
-              })}
-              {errors.mode && <p className={errorClass}>{errors.mode}</p>}
             </div>
           </>
         )}
